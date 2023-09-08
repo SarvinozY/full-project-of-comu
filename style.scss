@@ -4,6 +4,7 @@
     padding: 0;
     margin: 0;
     list-style: none;
+    box-sizing: inherit;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
 }
@@ -13,11 +14,12 @@ html {
 }
 
 .container {
-    width: 100%;
+    // width: 100%;
     max-width: 1190px;
     padding: 34px 15px;
     margin-left: auto;
     margin-right: auto;
+
 }
 
 :root {
@@ -40,11 +42,13 @@ html {
     &_logo {
         &--link {
             display: flex;
+            align-items: center;
         }
 
         &--img {
-            max-width: 100%;
-            height: auto;
+            width: 27px;
+            height: 25px;
+            display: block;
         }
 
         &--text {
@@ -96,10 +100,12 @@ html {
 .main {
     height: 100%;
     max-width: 100%;
-    background-image: url(/img/bg.png);
-    background-repeat: no-repeat;
+    // background-image: url(/img/bg.png);
+    background-color: var(--navbarBg);
+    border-radius: 52px 52px 201px 201px / 0px 0px 20px 20px;
     background-position: center center;
     background-size: cover;
+    box-shadow: (0px 12px 0px 0px rgba(247, 230, 204, 1));
 
     &_hero {
         background-image: url(/img/dotted.png);
@@ -194,6 +200,66 @@ html {
         margin-left: auto;
     }
 
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &_title {
+        color: #000;
+        font-family: Poppins;
+        font-size: 42px;
+        font-weight: 700;
+        letter-spacing: 0.42px;
+    }
+
+    &_basic {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &_parag {
+        width: 100%;
+        max-width: 657px !important;
+        text-align: center;
+
+
+    }
+
+    &_sides {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: start;
+        justify-content: center;
+        margin: 44px 0 15px 0;
+
+
+        &--parag {
+            max-width: 446px;
+            color: #393939;
+            font-size: 16.67px;
+            font-weight: 500;
+            line-height: 126%;
+            /* 21.004px */
+            letter-spacing: 0.5px;
+        }
+
+        &--table {
+            padding: 18px 0;
+
+        }
+
+        &--title {
+            color: #000;
+            font-size: 17.977px;
+            font-weight: 700;
+            line-height: 148.2%;
+        }
+    }
 }
 
 @media screen and (max-Width:666px) {
